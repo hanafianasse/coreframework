@@ -29,3 +29,8 @@ This project serves as a foundation for future Spring Boot applications. It incl
    git clone <repository-url>
    cd coreframework
    ```
+
+1. **Start docker services**:
+   ```bash
+   docker-compose up -d
+   ```
