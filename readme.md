@@ -30,7 +30,12 @@ This project serves as a foundation for future Spring Boot applications. It incl
    cd coreframework
    ```
 
-1. **Start docker services**:
+2. **Start docker services**:
    ```bash
    docker-compose up -d
+   ```
+
+3. **Stop docker services and removes the containers and the associated volumes**:
+   ```bash
+   docker-compose down -v
    ```
