@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: CoreFramework
+      changes:
+        - sqlFile:
+            path: classpath:db/sql/init_database.sql
+            encoding: UTF-8
+  - changeSet:
+      id: 2
+      author: CoreFramework
+      changes:
+        - sql:
+            sql: |
+              SELECT true;
