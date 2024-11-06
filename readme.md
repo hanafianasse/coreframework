@@ -35,7 +35,13 @@ This project serves as a foundation for future Spring Boot applications. It incl
    docker-compose up -d
    ```
 
+3. **Stop docker services**:
+   ```bash
+   docker-compose down
+   ```
+
 3. **Stop docker services and removes the containers and the associated volumes**:
    ```bash
    docker-compose down -v
    ```
+
