@@ -45,3 +45,38 @@ This project serves as a foundation for future Spring Boot applications. It incl
    docker-compose down -v
    ```
 
+### Accessing Secured Endpoints
+
+This project uses Spring Security with basic authentication
+enabled by default. When accessing the API endpoints through
+the browser, you will be prompted to log in with a username
+and password.
+
+1. **Default User Login:**
+
+- The default username is user: admin
+- The generated password can be found in the application
+logs under the line: *Using generated security password: ######*
+
+3. **Using curl for Secured API Calls:**
+
+```bash
+curl -u user:<password> http://localhost:8080/api/your-endpoint
+```
+
+4. **Custom Username and Password:**
+You can set a custom username and password by updating the following 
+properties in application.properties or application.yml:
+```bash
+spring.security.user.name=yourUsername
+spring.security.user.password=yourPassword
+```
+
+
+
+
+
+
+
+
+
