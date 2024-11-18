@@ -5,6 +5,7 @@ import com.hanafi.coreframework.entity.User;
 import com.hanafi.coreframework.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,11 +27,13 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         return userService.updateUser(id, userDetails);
